@@ -1,0 +1,312 @@
+/* General Body and Container Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #0d1117; /* Base dark color (like GitHub dark mode) */
+    
+    /* --- BACKGROUND OPTION 1: CSS Gradient (Default) --- */
+    /*
+    background-image: radial-gradient(ellipse at 70% 30%, rgba(88, 166, 255, 0.1) 0%, transparent 50%),
+                      radial-gradient(ellipse at 30% 70%, rgba(35, 134, 54, 0.08) 0%, transparent 50%),
+                      linear-gradient(180deg, #0d1117 0%, #111629 100%);
+    */
+    
+    /* --- BACKGROUND OPTION 2: Image --- */
+    background-image: url('../images/background.jpg'); /* Corrected path */
+    background-size: cover;
+    background-position: center center;
+    
+    background-attachment: fixed;
+    color: #c9d1d9; /* Light grey text for readability on dark background */
+    display: flex; /* For centering main-container */
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 760px; /* Optimal width for readability */
+    background-color: rgba(22, 27, 34, 0.85); /* Dark, semi-transparent card background */
+    padding: 30px 35px;
+    border-radius: 12px; 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3), 0 0 15px rgba(88, 166, 255, 0.1); /* Softer shadow + subtle blue glow */
+    border: 1px solid rgba(56, 109, 202, 0.25); 
+    text-align: center;
+    margin-top: 20px; /* Ensure some space from top */
+    margin-bottom: 20px; /* Ensure some space from bottom */
+}
+
+/* Typography */
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #58a6ff; /* Bright blue, spaceship.com accent */
+    font-size: 2.2rem; /* Adjusted size */
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem; /* More space after title */
+    text-shadow: 0 0 12px rgba(88, 166, 255, 0.3);
+}
+
+.section-title { /* For <h2> elements */
+    font-family: 'Orbitron', sans-serif;
+    color: #c9d1d9; /* Slightly less prominent than main title */
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid rgba(56, 109, 202, 0.2);
+    padding-bottom: 0.8rem;
+}
+
+/* Input Section */
+#input-section .form-group {
+    margin-bottom: 1.2rem;
+}
+
+#youtubeUrl {
+    background-color: #0d1117; 
+    border: 1px solid #30363d; 
+    color: #c9d1d9;
+    border-radius: 8px; 
+    padding: 14px 18px; 
+    font-size: 1.05rem;
+    width: 100%;
+    max-width: 520px; 
+    margin: 0 auto; 
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#youtubeUrl::placeholder {
+    color: #6e7681; 
+}
+
+#youtubeUrl:focus {
+    background-color: #161b22;
+    border-color: #58a6ff; 
+    box-shadow: 0 0 0 3.5px rgba(88, 166, 255, 0.25); 
+    outline: none;
+}
+
+/* Buttons */
+.btn.btn-action { /* General style for main action buttons */
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    padding: 10px 28px; 
+    border-radius: 8px; 
+    text-transform: none; 
+    letter-spacing: 0.3px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    display: block;
+    width: 100%;
+    max-width: 220px; 
+    margin: 0 auto;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+#parseButton {
+    background-color: #238636; /* Green for primary action */
+    border-color: #2ea043;
+    box-shadow: 0 2px 5px rgba(35, 134, 54, 0.2);
+}
+#parseButton:hover {
+    background-color: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(35, 134, 54, 0.3);
+}
+
+#downloadButton {
+    background-color: #1f6feb; /* Blue for download */
+    border-color: #388bfd;
+    box-shadow: 0 2px 5px rgba(31, 111, 235, 0.2);
+    margin-top: 1.5rem; /* Space above download button */
+}
+#downloadButton:hover {
+    background-color: #388bfd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(31, 111, 235, 0.3);
+}
+
+
+/* Video Info Section */
+#video-info-section {
+    text-align: left; 
+    background-color: rgba(13, 17, 23, 0.3); /* Subtle background for this section */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(56, 109, 202, 0.15);
+}
+.video-thumbnail {
+    border: none; 
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+.video-details-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.video-details-table {
+    background-color: transparent; 
+    color: #c9d1d9;
+    border: none; 
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.video-details-table th, .video-details-table td {
+    padding: 8px 0; 
+    border-bottom: 1px solid rgba(56, 109, 202, 0.15); 
+    vertical-align: top;
+}
+.video-details-table tr:last-child th,
+.video-details-table tr:last-child td {
+    border-bottom: none; 
+}
+.video-details-table th {
+    color: #8b949e; 
+    font-weight: 500;
+    width: 90px; 
+    text-align: left; /* Align th text to left */
+    padding-right: 10px;
+}
+.description-cell {
+    max-height: 100px; /* Slightly smaller */
+    overflow-y: auto;
+    background-color: transparent;
+    padding: 5px; /* Add some padding */
+    border-radius: 4px;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+}
+
+/* Progress Bar */
+#progress-section {
+    max-width: 520px;
+    margin: 1.8rem auto; 
+}
+.progress {
+    background-color: #010409; 
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    height: 18px; 
+    padding: 2px; 
+}
+.progress-bar {
+    background-color: #238636; 
+    border-radius: 4px; 
+    color: white;
+    font-size: 0.75rem;
+    line-height: 14px; 
+    text-shadow: none;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Message Area */
+#message-section {
+    max-width: 520px;
+    margin: 1.8rem auto; 
+}
+.alert {
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    text-align: left; 
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+}
+.alert-success {
+    background-color: rgba(35, 134, 54, 0.15);
+    border-color: #238636;
+    color: #3fb950;
+}
+.alert-danger {
+    background-color: rgba(218, 54, 69, 0.1);
+    border-color: #da3633;
+    color: #f85149;
+}
+.alert-info {
+    background-color: rgba(56, 139, 253, 0.1);
+    border-color: #388bfd;
+    color: #58a6ff;
+}
+
+/* Download History */
+#history-section .section-title {
+    margin-bottom: 1.2rem;
+}
+#downloadHistoryList {
+    max-width: 520px;
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+#downloadHistoryList .list-group-item {
+    background-color: rgba(13, 17, 23, 0.5); 
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    padding: 12px 18px;
+    transition: background-color 0.2s ease;
+}
+#downloadHistoryList .list-group-item:hover {
+    background-color: rgba(22, 27, 34, 0.7);
+}
+#downloadHistoryList .list-group-item a {
+    color: #58a6ff; 
+    font-weight: 500;
+    text-decoration: none;
+}
+#downloadHistoryList .list-group-item a:hover {
+    text-decoration: underline;
+}
+#downloadHistoryList .list-group-item small {
+    color: #8b949e; 
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+    margin-top: 2rem; 
+    width: 100%;
+}
+
+/* Scrollbar Styling (Optional, WebKit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d1117;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #58a6ff;
+}
+.description-cell::-webkit-scrollbar { /* Specific for description box */
+    width: 6px;
+}
+.description-cell::-webkit-scrollbar-thumb {
+    background: #2c333c;
+}
